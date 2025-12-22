@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<title>Ejemplo Integral: HTML5 y JavaScript</title>
+<html>
+    <head>
+        <style>
+            /* Estilos aplicados según el ejemplo de ejercicio práctico [1] */
+            .boton {
+                font-size: 12px;
+                width: 150px;
+                background-color: #6699CC;
+                color: white;
+                padding: 10px 10px;
+                margin: 8px 0;
+                border: 1px solid #6699CC;
+                border-radius: 2px;
+                cursor: pointer;
+                display: inline-block;
+                text-align: center;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- 1. Manipulación básica del DOM con getElementById [2] -->
+        <h1>Manipulación del DOM</h1>
+        <p id="prueba">Este texto será reemplazado automáticamente por
+            JavaScript.</p>
+
+        <hr>
+
+        <!-- 2. Eventos de Mouse (Inline) [3, 4] -->
+        <h2>Eventos de Mouse</h2>
+        <!-- Se pasa 'this' para referirse al mismo elemento HTML -->
+        <p id="texto-evento"
+            onmouseover="cambiarColor(this, 'red')"
+            onmouseout="cambiarColor(this, 'black')">
+            Pasa el mouse sobre mí para cambiar mi color.
+        </p>
+
+        <hr>
+
+        <!-- 3. Creación de Elementos (createElement y appendChild) [5, 6] -->
+        <h2>Creación Dinámica</h2>
+        <div id="contenedor-dinamico"></div>
+        <!-- Hipervínculo que actúa como botón invocando función JS -->
+        <a href="javascript:crearParrafo();" class="boton">Crear Nuevo
+            Elemento</a>
+
+        <hr>
+
+        <!-- 4. Event Listener (Escuchador de eventos) [7] -->
+        <h2>Event Listener (Resize)</h2>
+        <p id="info-ventana">Redimensiona la ventana del navegador para probar
+            este evento.</p>
+
+        <script>
+            /* 1. Modificar contenido al cargar [2] */
+            // Accedemos al elemento y reemplazamos su contenido
+            document.getElementById("prueba").innerHTML = 'Hola mundo DOM!';
+
+            /* 2. Funciones para eventos inline [4] */
+            function cambiarColor(elemento, color) {
+                // Cambia el estilo del elemento recibido como parámetro
+                elemento.style.color = color;
+            }
+
+            /* 3. Crear elementos dinámicamente [5, 6] */
+            function crearParrafo() {
+                // Crea el elemento <p>
+                var parrafo = document.createElement("P");
+                // Crea el nodo de texto
+                var texto = document.createTextNode("Este es un párrafo creado con JS.");
+                // Añade el texto al párrafo
+                parrafo.appendChild(texto);
+                // Añade el párrafo al contenedor en el body
+                document.getElementById("contenedor-dinamico").appendChild(parrafo);
+            }
+
+            /* 4. Event Listener [7, 8] */
+            // Función que detecta el tamaño de la ventana
+            function tamano() {
+                var w = window.innerWidth;
+                var h = window.innerHeight;
+                document.getElementById("info-ventana").innerHTML = 
+                    "Ancho: " + w + " | Alto: " + h;
+            }
+            
+            // Adjuntamos el evento 'resize' al objeto window sin ensuciar el HTML
+            window.addEventListener("resize", tamano);
+        </script>
+    </body>
+    <!-- </html> -->

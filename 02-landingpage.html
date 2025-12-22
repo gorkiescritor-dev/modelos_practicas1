@@ -1,0 +1,98 @@
+<!DOCTYPE html> <!-- Declaración HTML5 requerida [1] -->
+<html>
+    <head>
+        <title>Curso Full Stack: Node.js y React</title>
+        <meta charset="UTF-8">
+        <style>
+            /* Estilos generales */
+            body { font-family: sans-serif; margin: 0; text-align: center; }
+            
+            /* Estilos de la cabecera */
+            header { background-color: #333; color: white; padding: 20px; }
+            
+            /* Estilos de la sección principal (Hero) */
+            .hero { padding: 50px 20px; background-color: #f4f4f4; }
+            
+            /* Estilos específicos basados en el ejemplo práctico del libro [1] */
+            .boton-cta {
+                font-size: 16px;            /* Tamaño de letra */
+                width: 200px;               /* Ancho del elemento */
+                background-color: #6699CC;  /* Color de fondo */
+                color: white;               /* Color del texto */
+                padding: 10px 10px;         /* Espacio interior */
+                margin: 8px 0;              /* Espacio exterior */
+                border: 1px solid #6699CC;  /* Borde */
+                border-radius: 4px;         /* Bordes redondeados */
+                cursor: pointer;            /* Forma del puntero */
+                text-decoration: none;      /* Sin subrayado */
+                display: inline-block;
+            }
+            
+            .boton-cta:hover { background-color: #5588bb; }
+
+            /* Contenedor de características */
+            .features { display: flex; justify-content: space-around; padding: 40px; }
+            .feature-item { width: 30%; border: 1px solid #ddd; padding: 10px; }
+            
+            /* Mensaje dinámico */
+            #mensaje-registro { 
+                margin-top: 20px; 
+                font-weight: bold; 
+                color: green; 
+            }
+        </style>
+    </head>
+    <body>
+        <!-- 1. Cabecera (Header) -->
+        <header>
+            <h1>Domina la Web Moderna</h1>
+        </header>
+
+        <!-- 2. Cuerpo Principal (Body/Hero) -->
+        <div class="hero">
+            <h2>Aprende a integrar HTML5, JavaScript</h2>
+            <p>Construye aplicaciones escalables desde cero.</p>
+            
+            <!-- Botón con ID para manipulación desde JS -->
+            <button id="btn-registro" class="boton-cta">Inscribirse Ahora</button>
+            
+            <!-- Contenedor vacío para insertar contenido dinámico [1] -->
+            <p id="mensaje-registro"></p>
+        </div>
+
+        <!-- 3. Sección de Características -->
+        <div class="features">
+            <div class="feature-item">
+                <h3>HTML5 & CSS</h3>
+                <p>Estructura y diseño.</p>
+            </div>
+            <div class="feature-item">
+                <h3>JavaScript</h3>
+                <p>Lógica del cliente.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Node.js</h3>
+                <p>Backend potente.</p>
+            </div>
+        </div>
+
+        <script>
+            // 1. Acceso al elemento mediante getElementById [1]
+            var boton = document.getElementById("btn-registro");
+
+            // 2. Definición de la función que modifica el DOM
+            function confirmarRegistro() {
+                var mensaje = document.getElementById("mensaje-registro");
+                
+                // Modificación de la propiedad innerHTML [1]
+                mensaje.innerHTML = "¡Gracias por tu interés! Te hemos enviado más información.";
+                
+                // Ocultar el botón tras el clic modificando el estilo [1]
+                boton.style.display = "none";
+            }
+
+            // 3. Manejo de Eventos: Event Listener recomendado [1]
+            boton.addEventListener("click", confirmarRegistro);
+        </script>
+    </body>
+</html>

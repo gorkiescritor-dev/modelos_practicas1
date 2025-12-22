@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Detalle del Libro - El Eco de la Montaña</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .product-image {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .text-gold { color: #ffc107; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html"><i class="fas fa-book me-2"></i>BiblioStore</a>
+            <div class="d-flex">
+                 <a class="btn btn-warning btn-sm" href="#"><i class="fas fa-shopping-cart"></i> (0)</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="bg-light py-3 border-bottom">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                    <li class="breadcrumb-item"><a href="index.html">Catálogo</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">El Eco de la Montaña</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <section class="container py-5">
+        <div class="row">
+            <div class="col-md-5 mb-4">
+                <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=800&q=80" class="product-image img-fluid" alt="Portada del Libro">
+            </div>
+
+            <div class="col-md-7">
+                <span class="badge bg-success mb-2">Disponible</span>
+                <span class="badge bg-secondary mb-2">Ficción Histórica</span>
+                
+                <h1 class="fw-bold mb-1">El Eco de la Montaña</h1>
+                <p class="text-muted fs-5">Por: <a href="#" class="text-decoration-none">Isabella Bird</a></p>
+                
+                <div class="mb-3">
+                    <span class="text-gold"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+                    <span class="text-muted ms-2">(4.8 de 5 estrellas - 120 reseñas)</span>
+                </div>
+
+                <h2 class="display-6 fw-bold text-primary mb-4">$19.99</h2>
+
+                <p class="lead mb-4">
+                    Una historia conmovedora sobre la supervivencia y el redescubrimiento personal en los Alpes. Una narrativa que te dejará sin aliento desde la primera página hasta el desenlace inesperado.
+                </p>
+
+                <div class="d-flex align-items-center mb-4 gap-3">
+                    <div class="input-group" style="width: 130px;">
+                        <button class="btn btn-outline-secondary" type="button">-</button>
+                        <input type="text" class="form-control text-center" value="1">
+                        <button class="btn btn-outline-secondary" type="button">+</button>
+                    </div>
+                    <button class="btn btn-primary btn-lg flex-grow-1">
+                        <i class="fas fa-cart-plus me-2"></i> Añadir al Carrito
+                    </button>
+                    <button class="btn btn-outline-danger btn-lg">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+
+                <div class="row text-center bg-light p-3 rounded mx-0">
+                    <div class="col-4 border-end">
+                        <i class="fas fa-file-alt text-secondary mb-1"></i>
+                        <div class="small fw-bold">Páginas</div>
+                        <div class="small text-muted">340</div>
+                    </div>
+                    <div class="col-4 border-end">
+                        <i class="fas fa-language text-secondary mb-1"></i>
+                        <div class="small fw-bold">Idioma</div>
+                        <div class="small text-muted">Español</div>
+                    </div>
+                    <div class="col-4">
+                        <i class="fas fa-truck text-secondary mb-1"></i>
+                        <div class="small fw-bold">Envío</div>
+                        <div class="small text-muted">Gratis</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="sinopsis-tab" data-bs-toggle="tab" data-bs-target="#sinopsis-pane" type="button" role="tab">Sinopsis Completa</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="detalles-tab" data-bs-toggle="tab" data-bs-target="#detalles-pane" type="button" role="tab">Ficha Técnica</button>
+                    </li>
+                </ul>
+                <div class="tab-content p-4 border border-top-0 bg-white" id="myTabContent">
+                    <div class="tab-pane fade show active" id="sinopsis-pane" role="tabpanel">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <div class="tab-pane fade" id="detalles-pane" role="tabpanel">
+                        <table class="table table-striped">
+                            <tbody>
+                                <tr><th scope="row">ISBN</th><td>978-3-16-148410-0</td></tr>
+                                <tr><th scope="row">Editorial</th><td>Planeta Nuevo</td></tr>
+                                <tr><th scope="row">Año de Edición</th><td>2024</td></tr>
+                                <tr><th scope="row">Encuadernación</th><td>Tapa Blanda</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">© 2024 BiblioStore. Todos los derechos reservados.</p>
+            <a href="index.html" class="text-secondary small">Volver al catálogo</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
